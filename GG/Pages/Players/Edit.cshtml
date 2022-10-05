@@ -1,0 +1,60 @@
+﻿@page
+@model GG.Pages.Players.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Player</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Player.Id" />
+            <div class="form-group">
+                <label asp-for="Player.playerName" class="control-label"></label>
+                <input asp-for="Player.playerName" class="form-control" />
+                <span asp-validation-for="Player.playerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.phoneNumber" class="control-label"></label>
+                <input asp-for="Player.phoneNumber" class="form-control" />
+                <span asp-validation-for="Player.phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.emailAddress" class="control-label"></label>
+                <input asp-for="Player.emailAddress" class="form-control" />
+                <span asp-validation-for="Player.emailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.skillLevel" class="control-label"></label>
+                <input asp-for="Player.skillLevel" class="form-control" />
+                <span asp-validation-for="Player.skillLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.groundId" class="control-label"></label>
+                <select asp-for="Player.groundId" class="form-control" asp-items="ViewBag.groundId"></select>
+                <span asp-validation-for="Player.groundId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.sportId" class="control-label"></label>
+                <select asp-for="Player.sportId" class="form-control" asp-items="ViewBag.sportId"></select>
+                <span asp-validation-for="Player.sportId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

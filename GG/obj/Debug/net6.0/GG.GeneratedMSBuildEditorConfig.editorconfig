@@ -1,0 +1,140 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GG
+build_property.RootNamespace = GG
+build_property.ProjectDir = C:\Users\adars\OneDrive\Desktop\Project\GG\GG\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\adars\OneDrive\Desktop\Project\GG\GG
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Players/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Players/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Players/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Players/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Players/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Playgrounds/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWdyb3VuZHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Playgrounds/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWdyb3VuZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Playgrounds/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWdyb3VuZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Playgrounds/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWdyb3VuZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Playgrounds/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWdyb3VuZHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Refrees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVmcmVlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Refrees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVmcmVlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Refrees/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVmcmVlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Refrees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVmcmVlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Refrees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVmcmVlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Sports/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3BvcnRzXFNlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Stats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adars/OneDrive/Desktop/Project/GG/GG/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-56mesjmh1o

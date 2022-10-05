@@ -1,0 +1,54 @@
+﻿@page
+@model GG.Pages.Players.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .form-group{
+        margin-bottom:20px
+    }
+</style>
+<h1 style="color:#0073e6">Join As Player!</h1>
+
+<hr />
+<div class="row" style="margin-bottom:200px">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Player.playerName" placeholder="Enter your name" class="form-control" />
+                <span asp-validation-for="Player.playerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Player.phoneNumber" placeholder="Enter your mobile number" class="form-control" />
+                <span asp-validation-for="Player.phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Player.emailAddress" placeholder="Enter your email address"class="form-control" />
+                <span asp-validation-for="Player.emailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Player.skillLevel" placeholder="How much do you know the game? 1-5" class="form-control" />
+                <span asp-validation-for="Player.skillLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" value="@Model.GroundIdInput" asp-for="Player.groundId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="hidden" value="@Model.SportIdInput" asp-for="Player.sportId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Join" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col">
+        <img src="~/Images/player_create.jpg" width="500px" height="400px" />
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

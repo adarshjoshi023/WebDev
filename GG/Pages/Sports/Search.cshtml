@@ -1,0 +1,79 @@
+﻿@page
+@model GG.Pages.Sports.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+@*<p>
+    <a asp-page="Create">Create New</a>
+</p>*@
+<div class="=row">
+    <div class="col">
+        <form action="" method="get" class="form-inline">
+            <input asp-for="Query" class="form-control mr-sm-2 mb-2"/>
+            <button type="submit" class="btn-primary mb-2" style="text-align:right">Search</button>
+        </form>
+    </div>
+</div>
+@if(Model.SearchCompleted)
+{
+    if(Model.Sport.Any())
+    {
+        <div class="sports" style="margin-top:50px">
+            <div class="row">
+                @for (int i = 0; i <= 2; i++)
+                {
+                    string img_path = Model.Sport[i].sportName + ".jpg";
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/Images/@img_path" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"> @Html.DisplayFor(modelItem => Model.Sport[i].sportName)</h5>
+                                <p class="card-text"> @Html.DisplayFor(modelItem => Model.Sport[i].description)</p>
+                                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@Model.Sport[i].id">Join</a>
+                                <a class="btn btn-primary" href="/Playgrounds/Create?sportIdInput=@Model.Sport[i].id">Host</a>
+                            </div>
+                        </div>
+                    </div>
+                    ;
+
+                }
+
+            </div>
+            <div class="row" style="margin-top:20px">
+                @for (int i = 3; i <= 5; i++)
+                {
+
+                    string img_path = Model.Sport[i].sportName + ".jpg";
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/Images/@img_path" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"> @Html.DisplayFor(modelItem => Model.Sport[i].sportName)</h5>
+                                <p class="card-text"> @Html.DisplayFor(modelItem => Model.Sport[i].description)</p>
+                                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@Model.Sport[i].id">Join</a>
+                                <a class="btn btn-primary" href="/Playgrounds/Create?sportIdInput=@Model.Sport[i].id">Host</a>
+                            </div>
+                        </div>
+                    </div>
+                    ;
+                }
+            </div>
+
+        </div>
+
+
+    }
+    else{
+        <div class="row">
+            <div class="col">
+                <div class="alert-alert-info">
+                    No results match yout term <strong>@Model.Query</strong>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,103 @@
+﻿@page
+@model GG.Pages.Playgrounds.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    dt{
+        width:200px
+    }
+    dd{
+        width:300px
+    }
+    .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #0073e6;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            width: fit-content;
+            /* height: 75px; */
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+</style>
+<h1 style="color: #0073e6">Match Details - @Html.DisplayFor(model => model.Playground.groundName)</h1>
+<hr />
+<div style="display:flex;margin-top:70px">
+  
+    <dl class="row" style="margin-top:30px">
+        @*<dt class="col-sm-2">
+            Ground Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Playground.groundName)
+        </dd>*@
+        <dt class="col-sm-2">
+            <img src="~/Images/placeholder.png" width="40px" />
+        </dt>
+        <dd class="col-sm-10">
+           
+            @Html.DisplayFor(model => model.Playground.location)
+        </dd>
+        <dt class="col-sm-2">
+            <img src="~/Images/calendar.png" width="40px" />
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Playground.date)
+        </dd>
+        <dt class="col-sm-2">
+            <img src="~/Images/clock.png" width="40px" />
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Playground.time)
+        </dd>
+      
+    </dl>
+    <div class="right">
+        <img src="~/Images/pg_details.jpg" width="400px" height="400px" />
+    </div>
+</div>
+<div style="margin-bottom:60px"> 
+    <button class="button" style="vertical-align:middle">
+
+        <a href="/Players/Create?groundIdInput=@Model.Playground.Id&sportIdInput=@Model.Playground.sportId"><span style="color:white">Join As Player</span></a>
+
+    </button>
+    <button class="button" style="vertical-align:middle;">
+
+        <a href="/Refrees/Create?groundIdInput=@Model.Playground.Id&sportIdInput=@Model.Playground.sportId"><span style="color: white">Join As Referee</span></a>
+    </button>
+</div>

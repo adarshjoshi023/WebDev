@@ -1,0 +1,210 @@
+﻿@page
+@model GG.Pages.Sports.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    .split {
+        height: 70%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .left {
+        left: 25px;
+        top: 168px;
+    }
+    .right {
+        right: 25px;
+        top: 168px;
+        background-color: #dff5fa;
+    }
+    .centered {
+        position: absolute;
+       top:50%;
+       left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+              .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #0073e6;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 16px;
+        padding: 7px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        width: fit-content;
+        /* height: 75px; */
+        margin-left: 50px;
+        }
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        .button:hover span {
+          padding-right: 25px;
+        }
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+</style>
+<h1 style="font-family: 'Rajdhani', sans-serif;color:#0073e6;">   @Html.DisplayFor(model => model.Sport.sportName) Games near you!</h1>
+
+    
+@*<div>
+    <h4>Sport</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sport.sportName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sport.sportName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sport.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sport.description)
+        </dd>
+    </dl>
+</div>*@
+
+
+
+
+@if(Model.Sport.playgrounds.Count!=0){
+
+    string img_path = Model.Sport.sportName + ".jpg";
+    @*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sport.playgrounds[0].groundName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sport.playgrounds[0].location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sport.playgrounds[0].date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sport.playgrounds[0].time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sport.playgrounds[0].Sport)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Sport.playgrounds)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.groundName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sport.id)
+                    </td>
+                    <td>
+                        <a asp-page="/Players/Create" asp-route-id="@item.Id">Join as a player</a> |
+                        <a asp-page="/Playgrounds/Details" asp-route-id="@item.Id">Join</a>
+                        @*<a asp-page="/Refrees/Create" asp-route-id="@item.Id">Join as a refree</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+    <div class="split left">
+        <div class="centered">
+            <img src="/Images/@img_path" width="600px">
+        </div>
+    </div>
+
+    <div class="split right">
+        @foreach (var item in Model.Sport.playgrounds){
+            <div class="card mb-3" style="    margin-left: 20px; width: 95%;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                        <h5 class="card-title" style="margin-left:20px;padding:9px"> @Html.DisplayFor(modelItem => item.groundName)</h5>
+                        </div>
+                    @*<div style="display:flex">
+                    <p style='line-height: 20px'>
+                        <img src='~/Images/placeholder.png' style='vertical-align: middle' width="15px" /> @Html.DisplayFor(modelItem => item.location)
+                    </p>
+                    <p style='line-height: 20px; margin-left:20px'>
+                        <img src='~/Images/calendar.png' style='vertical-align: middle' width="15px" /> @Html.DisplayFor(modelItem => item.date)
+                    </p>
+                        <p style='line-height: 20px; margin-left:20px'>
+                        <img src='~/Images/clock.png' style='vertical-align: middle' width="15px" /> @Html.DisplayFor(modelItem => item.time)
+                    </p>
+                    </div>*@
+                    <div class="col">
+                        <button class="button" style="vertical-align:middle;background-color: #0073e6;">
+
+                            <a asp-page="/Playgrounds/Details" asp-route-id="@item.Id"><span style="color:white">Show Match details</span></a>
+
+                        </button>
+                        </div>
+                        @*<button class="button" style="vertical-align:middle;background-color: #0073e6">
+                            <a asp-page="/Refrees/Create" asp-route-id="@item.Id"><span style="color: white">Referee</span></a>
+                        </button>*@
+                        </div>
+                </div>
+            </div>
+        }
+        </div>
+}
+else{
+
+    string img_path = Model.Sport.sportName + ".jpg";
+
+    <div class="split left">
+        <div class="centered">
+            <img src="/Images/@img_path" width="600px" height="616px">
+        </div>
+    </div>
+    <div class="split right">
+        <div class="centered">
+    <div class=" alert alert-warning">
+        No matches scheduled for this sport, come back later or Host a new event!
+    </div>
+        </div>
+        </div>
+}
+<div>
+    @*<a asp-page="./Edit" asp-route-id="@Model.Sport?.id">Edit</a> |*@
+    @*<a asp-page="./Index"></a>*@
+</div>

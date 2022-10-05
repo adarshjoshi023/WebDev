@@ -1,0 +1,49 @@
+﻿@page
+@model GG.Pages.Refrees.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Refree</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Refree.refreeName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Refree.refreeName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Refree.refreeNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Refree.refreeNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Refree.emailAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Refree.emailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Refree.Playground)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Refree.Playground.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Refree.Sport)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Refree.Sport.id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Refree?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

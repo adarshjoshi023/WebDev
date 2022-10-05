@@ -1,0 +1,59 @@
+﻿@page
+@model GG.Pages.Playgrounds.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .form-group {
+        width: 65%;
+        margin-bottom: 20px
+    }
+</style>
+<div class="bgimg">
+    <div style="display:flex">
+        <h1>Host New Event!</h1>
+        <a asp-page="/Sports/Index"><img style="right:10%;top:15%;position:absolute;float:right" src="/Images/back.png" width="20px"></a>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <input asp-for="Playground.groundName" placeholder="Ground Name" class="form-control" />
+                    <span asp-validation-for="Playground.groundName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <input asp-for="Playground.location" placeholder="Enter Location" class="form-control" />
+                    <span asp-validation-for="Playground.location" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Playground.date" class="form-control" />
+                    <span asp-validation-for="Playground.date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Playground.time" class="form-control" />
+                    <span asp-validation-for="Playground.time" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @*<label asp-for="Playground.sportId" class="control-label"></label>
+                    <select asp-for="Playground.sportId" class ="form-control" asp-items="ViewBag.sportId"></select>*@
+                    <input type="hidden" value="@Model.SportIdInput" asp-for="Playground.sportId" class="form-control" />
+                </div>
+                <div class="form-group" style="margin-left:50px;margin-top:20px;margin-bottom:85%">
+                    <input type="submit" value="Create New Event" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

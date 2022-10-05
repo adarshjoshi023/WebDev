@@ -1,0 +1,53 @@
+﻿@page
+@model GG.Pages.Refrees.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .form-group{
+        margin-bottom:20px
+    }
+</style>
+<h1 style="color:#0073e6">Join As Referee</h1>
+
+<hr />
+<div class="row" style="margin-bottom:120px">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Refree.refreeName" placeholder="Enter your name" class="form-control" />
+                <span asp-validation-for="Refree.refreeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Refree.refreeNumber" placeholder="Enter your mobile number" class="form-control" />
+                <span asp-validation-for="Refree.refreeNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Refree.emailAddress" placeholder="Enter your email address" class="form-control" />
+                <span asp-validation-for="Refree.emailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" value="@Model.GroundIdInput" asp-for="Refree.groundId" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input  type="hidden" value="@Model.SportIdInput" asp-for="Refree.sportId" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Join" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col">
+        <img src="~/Images/refree_create.jpg" width="400px" height="500px" />
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

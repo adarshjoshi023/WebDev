@@ -1,0 +1,60 @@
+﻿@page
+@model GG.Pages.Refrees.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Refree[0].refreeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refree[0].refreeNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refree[0].emailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refree[0].Playground)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refree[0].Sport)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Refree) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.refreeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.refreeNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Playground.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sport.id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
